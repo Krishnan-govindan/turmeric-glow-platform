@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// IMPORTANT: set base to your repo name for GitHub Pages
-// URL will be: https://<user>.github.io/turmeric-glow-platform/
+// IMPORTANT: repo-based hosting needs the repo name as base
 const base = "/turmeric-glow-platform/";
 
 export default defineConfig(({ mode }) => ({
@@ -20,3 +19,4 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+
