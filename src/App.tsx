@@ -13,11 +13,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {/* ✅ HashRouter is here now */}
+      {/* ✅ Router is here */}
       <HashRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* add more routes above the catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
