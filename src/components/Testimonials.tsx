@@ -31,14 +31,15 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-secondary to-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <Badge className="mb-4 text-sm px-4 py-2">Testimonials</Badge>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
+    <section className="py-24 bg-gradient-to-b from-secondary/30 via-background to-secondary/30 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(45,90%,60%,0.05)_0%,transparent_50%)]"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20 animate-fade-in">
+          <Badge className="mb-6 text-sm px-6 py-2.5 shadow-lg">Testimonials</Badge>
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-foreground">
             What Our Customers Say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Trusted by thousands of customers across India. Here's what they have to say about our products and service.
           </p>
         </div>
@@ -47,34 +48,34 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.id}
-              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl animate-slide-up relative overflow-hidden"
+              className="border-2 professional-card animate-slide-up relative overflow-hidden bg-card shadow-xl"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="absolute top-4 right-4 opacity-10">
-                <Quote size={80} className="text-primary" />
+              <div className="absolute top-6 right-6 opacity-10">
+                <Quote size={90} className="text-primary" />
               </div>
               
-              <CardContent className="p-6 relative z-10">
-                <div className="flex gap-1 mb-4">
+              <CardContent className="p-8 relative z-10">
+                <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={20} className="fill-primary text-primary" />
+                    <Star key={i} size={22} className="fill-primary text-primary" />
                   ))}
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-6 text-base">
+                <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
                   "{testimonial.comment}"
                 </p>
 
-                <div className="flex items-center gap-4 pt-4 border-t border-border">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-display font-bold text-xl">
+                <div className="flex items-center gap-4 pt-6 border-t-2 border-border/50">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full flex items-center justify-center shadow-md">
+                    <span className="text-primary font-display font-bold text-2xl">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.location}</div>
+                    <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground font-medium">{testimonial.role}</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">{testimonial.location}</div>
                   </div>
                 </div>
               </CardContent>
@@ -82,10 +83,10 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-2 bg-primary/5 border border-primary/20 rounded-full px-6 py-3">
-            <Star className="fill-primary text-primary" size={20} />
-            <span className="font-semibold text-foreground">
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center gap-3 bg-primary/10 border-2 border-primary/30 rounded-full px-8 py-4 shadow-lg">
+            <Star className="fill-primary text-primary" size={24} />
+            <span className="font-bold text-foreground text-lg">
               4.9/5 Average Rating from 500+ Reviews
             </span>
           </div>

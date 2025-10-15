@@ -14,29 +14,29 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border shadow-md">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="Neha's Turmeric" className="h-10 w-auto" />
-            <span className="font-display font-bold text-xl text-foreground">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img src="/logo.png" alt="Neha's Turmeric" className="h-12 w-auto group-hover:scale-105 transition-transform" />
+            <span className="font-display font-bold text-2xl text-foreground group-hover:text-primary transition-colors">
               Neha's Turmeric
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.path}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-foreground hover:text-primary transition-all font-semibold text-base relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
               >
                 {link.name}
               </a>
             ))}
-            <Button variant="cta" size="lg">
+            <Button variant="cta" size="lg" className="px-6 py-2.5 shadow-lg hover:shadow-xl">
               Get Quote
             </Button>
           </div>

@@ -19,56 +19,56 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-secondary to-muted border-t border-border">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gradient-to-b from-secondary/50 to-muted border-t-2 border-border shadow-inner">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="Neha's Turmeric" className="h-10 w-auto" />
-              <span className="font-display font-bold text-xl text-foreground">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/logo.png" alt="Neha's Turmeric" className="h-12 w-auto" />
+              <span className="font-display font-bold text-2xl text-foreground">
                 Neha's Turmeric
               </span>
             </div>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-muted-foreground mb-6 leading-relaxed text-base">
               Premium quality turmeric sourced directly from farmers. 
               Your trusted partner for authentic Indian spices.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-all group shadow-md hover:shadow-lg hover:scale-110"
                 aria-label="Facebook"
               >
-                <Facebook size={18} className="text-primary group-hover:text-primary-foreground" />
+                <Facebook size={20} className="text-primary group-hover:text-primary-foreground" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-all group shadow-md hover:shadow-lg hover:scale-110"
                 aria-label="Instagram"
               >
-                <Instagram size={18} className="text-primary group-hover:text-primary-foreground" />
+                <Instagram size={20} className="text-primary group-hover:text-primary-foreground" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-all group shadow-md hover:shadow-lg hover:scale-110"
                 aria-label="Twitter"
               >
-                <Twitter size={18} className="text-primary group-hover:text-primary-foreground" />
+                <Twitter size={20} className="text-primary group-hover:text-primary-foreground" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-all group shadow-md hover:shadow-lg hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={18} className="text-primary group-hover:text-primary-foreground" />
+                <Linkedin size={20} className="text-primary group-hover:text-primary-foreground" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-4 text-foreground">Quick Links</h3>
+            <h3 className="font-display font-bold text-xl mb-6 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -85,7 +85,7 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-4 text-foreground">Our Products</h3>
+            <h3 className="font-display font-bold text-xl mb-6 text-foreground">Our Products</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product}>
@@ -102,7 +102,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-4 text-foreground">Contact Us</h3>
+            <h3 className="font-display font-bold text-xl mb-6 text-foreground">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin size={18} className="text-primary mt-1 flex-shrink-0" />
